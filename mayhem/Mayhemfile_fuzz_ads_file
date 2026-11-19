@@ -1,0 +1,9 @@
+project: savantenvs/ADS
+target: fuzz_ads_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ads_file/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ads_file
+    libfuzzer: true
+    timeout: 10

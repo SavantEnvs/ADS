@@ -1,0 +1,9 @@
+project: savantenvs/ADS
+target: fuzz_rtime_access
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rtime_access/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rtime_access
+    libfuzzer: true
+    timeout: 10
